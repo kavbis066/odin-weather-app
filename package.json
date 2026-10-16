@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://kavbis066.github.io/odin-weather-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack serve"
+    "build": "webpack --mode production",
+    "start": "webpack serve",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.8",
     "webpack": "^5.111.0",
     "webpack-cli": "^7.2.3",
