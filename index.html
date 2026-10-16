@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Weatherly</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- HEADER -->
+        <header class="header">
+            <a href="#" class="logo">
+                Weatherly
+            </a>
+
+            <form class="search-form">
+                <label for="location-search" class="sr-only">
+                    Search for a city
+                </label>
+                <input
+                    type="search"
+                    id="location-search"
+                    placeholder="Search city..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+
+            <div class="unit-toggle">
+                <button
+                    type="button"
+                    class="unit-button active"
+                    data-unit="metric"
+                >
+                    °C
+                </button>
+                <button
+                    type="button"
+                    class="unit-button"
+                    data-unit="us"
+                >
+                    °F
+                </button>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- Loading -->
+            <div class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather...</p>
+            </div>
+
+            <!-- Error -->
+            <div class="error hidden">
+                <p class="error-message"></p>
+            </div>
+
+            <!-- WEATHER -->
+            <section class="weather hidden">
+                <!-- Current weather -->
+                <section class="current-weather">
+                    <div class="location-info">
+                        <p class="country"></p>
+                        <h1 class="city"></h1>
+                        <p class="date"></p>
+                    </div>
+
+                    <div class="current-main">
+                        <div class="weather-icon"></div>
+                        <div class="temperature">
+                            <span class="temperature-value"></span>
+                            <span class="temperature-unit">°C</span>
+                        </div>
+                        <p class="conditions"></p>
+                        <p class="feels-like"></p>
+                    </div>
+                </section>
+
+                <!-- Weather details -->
+                <section class="weather-details">
+                    <article class="detail-card">
+                        <span class="detail-icon">💧</span>
+                        <div>
+                            <p>Humidity</p>
+                            <strong class="humidity"></strong>
+                        </div>
+                    </article>
+
+                    <article class="detail-card">
+                        <span class="detail-icon">💨</span>
+                        <div>
+                            <p>Wind</p>
+                            <strong class="wind"></strong>
+                        </div>
+                    </article>
+
+                    <article class="detail-card">
+                        <span class="detail-icon">🌡️</span>
+                        <div>
+                            <p>Pressure</p>
+                            <strong class="pressure"></strong>
+                        </div>
+                    </article>
+
+                    <article class="detail-card">
+                        <span class="detail-icon">👁️</span>
+                        <div>
+                            <p>Visibility</p>
+                            <strong class="visibility"></strong>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Forecast -->
+                <section class="forecast-section">
+                    <div class="section-heading">
+                        <h2>7-Day Forecast</h2>
+                    </div>
+                    <div class="forecast"></div>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Weather data provided by Visual Crossing
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
